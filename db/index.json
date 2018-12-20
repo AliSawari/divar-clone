@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "name": "maledong",
+      "email": "maledong@gmail.com",
+      "password": "950d7fd934d8f31a474899fc77ff492b246435be485167e4858c2034732be106",
+      "createdAt": "12/19/2018, 5:13:08 PM",
+      "posts": []
+    },
+    {
+      "name": "Ali Sawari",
+      "email": "creatorofthis@gmail.com",
+      "password": "493e67127240f4b77669a8f80dd181c6d592b7979b839eed9efac49e6e8259b7",
+      "createdAt": "12/19/2018, 5:14:21 PM",
+      "posts": []
+    }
+  ]
+}
