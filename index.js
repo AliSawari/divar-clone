@@ -9,6 +9,7 @@ const expHbr = require('express-handlebars')
 const public = `${__dirname}/public`
 const file = f =>  `${public}/${f}`
 const User = require('./helpers/user')
+const login = require('./helpers/login')
 
 // configuring server
 app.use(express.static(public))
@@ -23,12 +24,6 @@ app.all('/', (req,res) => {
   })
 })
 
-app.post('/api/user', (req, res) => {
-  let {name,email,password} = req.body
-  let user = new User(name, email, password)
-  user.save()
-  res.send("success: user has been saved!")
-})
 
 // starting server
 app.listen(3000, err => {

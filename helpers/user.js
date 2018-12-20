@@ -1,11 +1,7 @@
 const {saveData,loadData} = require('./io')
-const {createHmac} = require('crypto')
+const encrypt = require('./encrypt')
 
 var allData = loadData()
-
-function encrypt(data){
-  return createHmac('sha256', data).digest('hex')
-}
 
 class User {
   constructor(name,email,password){
