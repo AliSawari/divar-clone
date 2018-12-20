@@ -1,0 +1,26 @@
+<div class="jumbotron">
+  <h1 class="display-4">به دیوار خوش آمدید!</h1>
+  <p class="lead">تمامی محصولات را میتوانید در زیر ببینید</p>
+  <hr class="my-4">
+  <p>این یک نسخه ی آزمایشی از سایت دیوار میباشد</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">بیشتر</a>
+  </p>
+</div>
+
+<div class="conainer">
+  <div class="row">
+    {{#each data.posts}}
+      <div class="col-md-3">
+        <div class="card" style="width: 15rem;">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{this.title}}</h5>
+            <p class="card-text">{{this.disc}}</p>
+            <a href="#" class="btn btn-primary">دیدن این محصول</a>
+          </div>
+      </div>
+    </div>
+ {{/each}}
+ </div>
+</div>

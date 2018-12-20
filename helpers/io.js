@@ -12,8 +12,7 @@ function saveData(data){
 function loadData(){
   try {
     let d = fs.readFileSync(DB).toString()
-    let a = JSON.parse(d)
-    return a
+    return JSON.parse(d)
   } catch(e){
     console.log(e)
   }

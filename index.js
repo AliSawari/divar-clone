@@ -8,8 +8,8 @@ const expHbr = require('express-handlebars')
 // custom
 const public = `${__dirname}/public`
 const file = f =>  `${public}/${f}`
-const User = require('./helpers/user')
-const login = require('./helpers/login')
+const {loadData, saveData} = require('./helpers/io')
+const Post = require('./helpers/post')
 
 // configuring server
 app.use(express.static(public))
@@ -19,9 +19,36 @@ app.use(bp.json())
 
 // routes
 app.all('/', (req,res) => {
+  let all = loadData()
   res.render(file('home'), {
-    title: 'Divar Home'
+    title: 'Divar Home',
+    data: all
   })
+})
+
+app.get('/product/:id', (req, res) => {
+  let {id} = req.params
+  let all = loadData()
+  res.render(file('product'), {
+    title: id
+  })
+})
+
+app.get('/new', (req, res) => {
+  res.render(file('new'), {
+    title: "New Post"
+  })
+})
+
+app.post('/newPost', (req, res) => {
+  let all = loadData()
+  let {title, disc, pics} = req.body
+  let p = new Post(title, disc, pics)
+  all.posts.push(p)
+  saveData(all)
+  setTimeout(() => {
+    res.redirect('/')
+  }, 500)
 })
 
 
