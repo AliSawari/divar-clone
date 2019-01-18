@@ -1,0 +1,46 @@
+<div class="container">
+<form method="POST" action="/newpost">
+  <fieldset>
+    <legend>New Post</legend>
+    <div class="form-group row">
+      <label for="staticEmail" class="col-sm-2 col-form-label">Name example</label>
+      <div class="col-sm-10">
+        <input type="text" readonly="" class="form-control-plaintext" id="staticEmail" value="Samsung Galaxy S9">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Name of the Product</label>
+      <input name="productName" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name">
+      <small id="emailHelp" class="form-text text-muted">it will be shown publicly</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Manufacturer name</label>
+      <input name="manuName" type="text" class="form-control" id="exampleInputPassword1" placeholder="company">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword2">Price</label>
+      <input name="price" type="text" class="form-control" id="exampleInputPassword2" placeholder="Price in USD">
+    </div>
+    <div class="form-group">
+      <label for="exampleSelect1">Rate</label>
+      <select class="form-control" id="exampleSelect1">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleTextarea">Description</label>
+      <textarea name="description" class="form-control" id="exampleTextarea" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputFile">Picture</label>
+      <input name="pic" type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+      <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+    </div>
+    <button style="width:100%;margin-bottom:100px" type="submit" class="btn btn-outline-success">Submit</button>
+  </fieldset>
+</form>
+</div>

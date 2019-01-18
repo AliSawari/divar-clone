@@ -1,26 +1,32 @@
 <div class="jumbotron">
-  <h1 class="display-4">به دیوار خوش آمدید!</h1>
-  <p class="lead">تمامی محصولات را میتوانید در زیر ببینید</p>
+  <h1 class="display-3">Welcome to Divar!</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
   <hr class="my-4">
-  <p>این یک نسخه ی آزمایشی از سایت دیوار میباشد</p>
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
   <p class="lead">
-    <a class="btn btn-primary btn-lg" href="#" role="button">بیشتر</a>
+    <a class="btn btn-primary btn-lg" href="/new" role="button">Add New Post</a>
   </p>
 </div>
 
-<div class="conainer">
+<blockquote class="blockquote text-center">
+  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+</blockquote>
+
+<div class="container">
   <div class="row">
     {{#each data.posts}}
-      <div class="col-md-3">
-        <div class="card" style="width: 15rem;">
-          <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="col-3">
+          <div class="card border-primary mb-3" style="max-width: 20rem;">
+          <div class="card-header"><b>{{this.price}}$</b></div>
           <div class="card-body">
-            <h5 class="card-title">{{this.title}}</h5>
-            <p class="card-text">{{this.disc}}</p>
-            <a href="#" class="btn btn-primary">دیدن این محصول</a>
+            <h4 class="card-title">{{this.title}}</h4>
+            <p class="card-text">{{this.desc}}</p>
           </div>
+          <a role="button" class="btn btn-primary" href="/product/{{this.id}}">See Product</a>
+        </div>
       </div>
-    </div>
- {{/each}}
- </div>
+    {{/each}}
+  </div>
 </div>
+
