@@ -1,7 +1,6 @@
 // importing libs
 const express = require('express')
 const app = express()
-const fs = require('fs')
 const bp = require('body-parser')
 const expHbr = require('express-handlebars')
 
