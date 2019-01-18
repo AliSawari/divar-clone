@@ -32,7 +32,8 @@ app.get('/product/:id', (req,res) => {
       product: p
     })
   } else {
-    res.status(404).render(file('error'), {title:'page not found'})
+    res.status(404).render(file('error'),
+    {title:'page not found', status: 404})
   }
 })
 
@@ -41,10 +42,15 @@ app.get('/new', (req,res) => res.render(file('new'), {title:"new post"}))
 app.post('/newpost', (req,res) => {
   let all = loadData()
   let {productName,manuName,price,description} = req.body
-  let p = new Post(`${manuName} - ${productName}`, price, description)
-  all.posts.push(p)
-  saveData(all)
-  res.redirect('/')
+  if(productName.length > 3 && manuName.length > 2 && price){
+    let p = new Post(`${manuName} - ${productName}`, price, description)
+    all.posts.push(p)
+    saveData(all)
+    res.redirect('/')
+  } else {
+    res.status(400).render(file('error'),
+    {title: 'bad request', status:400})
+  }
 })
 
 // starting server

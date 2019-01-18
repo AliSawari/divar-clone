@@ -17,10 +17,28 @@
       <label for="exampleInputPassword1">Manufacturer name</label>
       <input name="manuName" type="text" class="form-control" id="exampleInputPassword1" placeholder="company">
     </div>
+
     <div class="form-group">
+      <label class="control-label">Price</label>
+      <div class="form-group">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">$</span>
+          </div>
+          <input name="price" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+          <div class="input-group-append">
+            <span class="input-group-text">.00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{!-- <div class="form-group">
       <label for="exampleInputPassword2">Price</label>
       <input name="price" type="text" class="form-control" id="exampleInputPassword2" placeholder="Price in USD">
-    </div>
+    </div> --}}
+
+
     <div class="form-group">
       <label for="exampleSelect1">Rate</label>
       <select class="form-control" id="exampleSelect1">
@@ -36,10 +54,20 @@
       <textarea name="description" class="form-control" id="exampleTextarea" rows="3"></textarea>
     </div>
     <div class="form-group">
-      <label for="exampleInputFile">Picture</label>
-      <input name="pic" type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-      <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+    <div class="custom-control custom-switch">
+      <input type="checkbox" class="custom-control-input" id="customSwitch1" checked="">
+      <label class="custom-control-label" for="customSwitch1">Available</label>
     </div>
+    <div class="form-group">
+      <div class="input-group mb-3">
+        <label class="col-md-4"><h4>Picture</h4></label>
+        <div class="custom-file">
+          <input name="pic" type="file" class="custom-file-input" id="inputGroupFile02">
+          <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+        </div>
+      </div>
+    </div>
+  </div>
     <button style="width:100%;margin-bottom:100px" type="submit" class="btn btn-outline-success">Submit</button>
   </fieldset>
 </form>

@@ -1,7 +1,7 @@
 {
   "posts": [
     {
-      "title": "Samsung Galaxy S9",
+      "title": "Samsung - Galaxy S9",
       "desc": "the new samsung flagship",
       "id": 79,
       "price": 150
@@ -11,6 +11,13 @@
       "title": "Huawei - Mate 20",
       "price": "880",
       "desc": "the best of all huawei",
+      "pic": null
+    },
+    {
+      "id": 269,
+      "title": "Sony - Xperia Z3",
+      "price": "750",
+      "desc": "this is the new Xperia",
       "pic": null
     }
   ]
